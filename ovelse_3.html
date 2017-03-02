@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var kokkedal = {
+                lat: 55.909984,
+                lng: 12.479642
+            };
+
+            var nivå = {
+                lat: 55.934365,
+                lng: 12.506417
+            };
+
+            var nørreport = {
+                lat: 55.683289,
+                lng: 12.571517
+            };
+
+            var hellerup = {
+                lat: 55.731016,
+                lng: 12.567669
+            };
+
+            var birkerød = {
+                lat: 55.840372,
+                lng: 12.424714
+            };
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: kokkedal
+            });
+
+            var marker = new google.maps.Marker({
+                position: kokkedal,
+                map: map,
+                title: 'Det farlige kvarter!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: nivå,
+                map: map,
+                title: 'Det mindre farlige kvarter!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: nørreport,
+                map: map,
+                title: 'Det mindre farlige kvarter!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: hellerup,
+                map: map,
+                title: 'Det mindre farlige kvarter!'
+            });
+
+            var marker = new google.maps.Marker({
+                position: birkerød,
+                map: map,
+                title: 'Det mindre farlige kvarter!'
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHeYS8ugHK5UPn0zr24K33Q8fgIx_zLZc&callback=initMap">
+    </script>
+</body>
+
+</html>
